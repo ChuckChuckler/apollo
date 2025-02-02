@@ -1,0 +1,157 @@
+@keyframes buttonSwell{
+    from{
+        width: 10vw;
+        height: 5vh;
+        font-size: 1.3vw;
+    }
+    to{
+        width: 12vw;
+        height: 6vh;
+        font-size: 1.5vw;
+    }
+}
+
+@keyframes buttonShrink{
+    to{
+        width: 10vw;
+        height: 5vh;
+        font-size: 1.3vw;
+    }
+    from{
+        width: 12vw;
+        height: 6vh;
+        font-size: 1.5vw;
+    }
+}
+
+.notesTitle{
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 4vw;
+}
+
+body{
+    background-color: #171618;
+    overflow-x: hidden;
+}
+
+.notesHeader{
+    width: 50%;
+    margin: auto;
+}
+
+.buttonsHolder{
+    text-align: center;
+}
+
+.rename{
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+.edit{
+    display: none;
+}
+
+.notesEdit{
+    width: 95vw;
+    height: 95vh;
+    background-color: #302e31;
+    color: white;
+    display: block;
+    margin: auto;
+}
+
+.deleteDiv{
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(112, 112, 117);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 3;
+}
+
+.warning{
+    color: rgb(52, 50, 54);
+}
+
+.warning1{
+    font-size: 2.5vw;
+    font-family: "Playfair Display", serif;
+}
+
+.warning2{
+    font-size: 2.7vw;
+    font-family: "Bona Nova SC", serif;
+}
+
+.divider{
+    width: 95%;
+    display: block;
+    margin: auto;
+}
+
+h1, p{
+    color: white
+}
+
+.notesBody{
+    font-family: "EB Garamond", serif;
+    font-weight: 900;
+    font-size: 1.5vw;
+}
+
+button{
+    background-color: rgb(184, 178, 178);
+    color:rgb(28, 24, 29);
+    border: solid 2px;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1.3vw;
+    font-family: "Bona Nova SC", serif;
+}
+
+button:hover{
+    background-color: rgb(109, 100, 100);
+    width: 12vw;
+    height: 6vh;
+    font-size: 1.5vw;
+    animation: buttonSwell 0.2s;
+}
+
+button:not(:hover){
+    background-color: rgb(184, 178, 178);
+    width: 10vw;
+    height: 5vh;
+    font-size: 1.3vw;
+    animation: buttonShrink 0.2s;
+}
+
+.overlay{
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.editBtn{
+    display: block;
+    margin: auto;
+}
+
+input{
+    width: 45%;
+    height: 5%;
+}
+
+.funcInfo{
+    text-align: center;
+}

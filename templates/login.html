@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/logUp.css" rel="stylesheet" type="text/css">
+    <title>Notes Transcrpt for lack of better name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>★ Apollo ★</h1>
+    <div class="flexboxHolder">
+        <div class="innerFlex">
+            <h3>Sign Up</h3>
+            <br>
+            <div class="userInfoDiv">
+                <label for="signUpUser">Username</label>
+                <br>
+                <input type="text" autocomplete="off" id="signUpUser">
+                <br>
+                <br>
+                <label for="signUpPass">Password</label>
+                <br>
+                <input type="password" autocomplete="off" id="signUpPass">
+            </div>
+            <br>
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+        <div class="innerFlex">
+            <h3>Log In</h3>
+            <br>
+            <div class="userInfoDiv">
+                <label for="logInUser">Username</label>
+                <br>
+                <input type="text" autocomplete="off" id="logInUser">
+                <br>
+                <br>
+                <label for="logInPass">Password</label>
+                <br>
+                <input type="password" autocomplete="off" id="logInPass">
+            </div>
+            <br>
+            <button onclick="logIn()">Log In</button>
+        </div>
+    </div>
+
+    <h4 id="errInfo"></h4>
+
+    <script src="/static/loginScript.js"></script>
+</body>
+</html>

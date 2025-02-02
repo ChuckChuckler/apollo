@@ -1,0 +1,108 @@
+@keyframes buttonSwell{
+    from{
+        width: 30vw;
+        height: 7vh;
+    }
+    to{
+        width: 32vw;
+        height: 8vh;
+    }
+}
+
+@keyframes buttonShrink{
+    to{
+        width: 30vw;
+        height: 7vh;
+    }
+    from{
+        width: 32vw;
+        height: 8vh;
+    }
+}
+
+@keyframes checkmarkSwell{
+    from{
+        height: 300px;
+        width: 300px;
+    }
+    to{
+        height: 325px;
+        width: 325px;
+    }
+}
+
+@keyframes checkmarkShrink{
+    to{
+        height: 300px;
+        width: 300px;
+    }
+    from{
+        height: 325px;
+        width: 325px;
+    }
+}
+
+body{
+    background-color: #171618;
+}
+
+.checkmark{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(185, 168, 201);
+    border-radius: 100%;
+    background-image: url("/static/imgs/checkmarkIcon.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+.checkmark:hover{
+    height: 325px;
+    width: 325px;
+    animation: checkmarkSwell 0.5s;
+}
+
+.checkmark:not(:hover){
+    height: 300px;
+    width: 300px;
+    animation: checkmarkShrink 0.5s;
+}
+
+h1, h3{
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-size: 80px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+button{
+    display: block;
+    margin: auto;
+    width: 30vw;
+    height: 7vh;
+    background-color: rgb(184, 178, 178);
+    color:rgb(28, 24, 29);
+    border: solid 2px;
+}
+
+button:hover{
+    background-color: rgb(109, 100, 100);
+    width: 32vw;
+    height: 8vh;
+    animation: buttonSwell 0.2s ease-out;
+}
+
+button:not(:hover){
+    background-color: rgb(184, 178, 178);
+    width: 30vw;
+    height: 7vh;
+    animation: buttonShrink 0.2s ease-out;
+}

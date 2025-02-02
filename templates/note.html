@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link href="/static/noteStyle.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay" id="overlay">
+    </div>
+    <button onclick="main()">Back</button>
+    <div class="notesHeader">
+        <h1 id="notesTitle" class="notesTitle"></h1>
+        <div id="rename" class="rename">
+            <br>
+            <br>
+            <input type="text" id="titleRename" autocomplete="off">
+            <button onclick="rename()">Rename</button>
+            <br>
+            <br>
+        </div>
+        <div class="buttonsHolder">
+            <button onclick="showRename()">Rename</button>
+            <button onclick="showEdit()">Edit</button>
+            <button onclick="showDelete()">Delete</button>
+        </div>
+    </div>
+    <p id="funcInfo" class="funcInfo"></p>
+    <hr class="divider">
+    <br>
+    <p id="notesBody" class="notesBody"></p>
+    <div class="edit" id="edit">
+        <textarea class="notesEdit" id="notesEdit"></textarea>
+        <br>
+        <button class="editBtn" onclick="edit()">Save Edits</button>
+    </div>
+    <div class="deleteDiv" id="deleteDiv">
+        <h3 class="warning warning1">Are you sure?</h3>
+        <h4 class="warning warning2">This cannot be undone!</h4>
+        <button onclick="hideDelete()">Nevermind</button>
+        <button onclick="deleteNote()">Delete!</button>
+        <p id="deleteInfo"></p>
+    </div>
+    <script>
+        window.onload = function(){
+            loadDisplay({{noteTitle|tojson}}, {{noteBody|tojson}});
+        }
+    </script>
+    <script src="/static/mainScript.js"></script>
+</body>
+</html>

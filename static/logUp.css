@@ -1,0 +1,136 @@
+@keyframes buttonSwell{
+    from{
+        width: 30vw;
+        height: 7vh;
+    }
+    to{
+        width: 32vw;
+        height: 8vh;
+    }
+}
+
+@keyframes buttonShrink{
+    to{
+        width: 30vw;
+        height: 7vh;
+    }
+    from{
+        width: 32vw;
+        height: 8vh;
+    }
+}
+
+@keyframes divSwell{
+    from{width: 48%;}
+    to{width: 50%;}
+}
+
+@keyframes divShrink{
+    to{width: 48%;}
+    from{width: 50%;}
+}
+
+body{
+    background-color: #171618;
+}
+
+.flexboxHolder{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    height: 80%;
+    background-color: #0a0a0a;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.innerFlex{
+    width: 48%;
+    height: 100%;
+    background-color: #262329;
+}
+
+.innerFlex:hover{
+    width: 50%;
+    animation: divSwell 0.5s;
+}
+
+.innerFlex:not(:hover){
+    width: 48%;
+    animation: divShrink 0.5s;
+}
+
+h1, h3{
+    text-align: center;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 3vw;
+    text-decoration: underline;
+    font-family: "Playfair Display", serif;
+}
+
+h3{
+    color: rgb(184, 178, 178);
+    font-size: 2.5vw;
+    text-decoration: underline;
+    font-family: "Bona Nova SC", serif;
+}
+
+.userInfoDiv{
+    background-color: rgb(104, 88, 112);
+    width: 80%;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+button{
+    display: block;
+    margin: auto;
+    width: 30vw;
+    height: 7vh;
+    background-color: rgb(184, 178, 178);
+    color:rgb(28, 24, 29);
+    border: solid 2px;
+    font-family: "Playfair Display", serif;
+}
+
+button:hover{
+    background-color: rgb(109, 100, 100);
+    width: 32vw;
+    height: 8vh;
+    animation: buttonSwell 0.2s ease-out;
+}
+
+button:not(:hover){
+    background-color: rgb(184, 178, 178);
+    width: 30vw;
+    height: 7vh;
+    animation: buttonShrink 0.2s ease-out;
+}
+
+input{
+    width: 80%;
+    height: 20%;
+    background-color: rgb(206, 196, 196);
+    color: rgb(84, 79, 90);
+}
+
+label{
+    color: rgb(28, 24, 29);
+    font-size: 1.5vw;
+    font-family: "EB Garamond", serif;
+    font-weight:900;
+}
+
+h4{
+    text-align: center;
+    color: rgb(228, 202, 245);
+    font-family: "EB Garamond", serif;
+    font-weight:900;
+}

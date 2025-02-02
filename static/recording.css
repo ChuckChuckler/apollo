@@ -1,0 +1,82 @@
+@keyframes buttonSwell{
+    from{
+        height: 200px;
+        width: 200px;
+    }
+    to{
+        height: 225px;
+        width: 225px;
+    }
+}
+
+@keyframes buttonShrink{
+    to{
+        height: 200px;
+        width: 200px;
+    }
+    from{
+        height: 225px;
+        width: 225px;
+    }
+}
+
+body{
+    background-color: #171618;
+}
+
+button{
+    height: 200px;
+    width: 200px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(185, 168, 201);
+    border-radius: 100%;
+    border: none;
+    display: block;
+    margin: auto;
+}
+
+button:hover{
+    height: 225px;
+    width: 225px;
+    background-color: rgb(142, 131, 153);
+    animation: buttonSwell 0.5s ease-out;
+}
+
+button:not(:hover){
+    height: 200px;
+    width: 200px;
+    background-color: rgb(185, 168, 201);
+    animation: buttonShrink 0.5s ease-out;
+}
+
+.startRecord{
+    background-image: url("/static/imgs/microphoneIcon.png");
+}
+
+.stopRecord{
+    background-image: url("/static/imgs/stopIcon.png");
+    display: none;
+}
+
+.infoMsg{
+    text-align: center;
+    color: rgb(235, 201, 240);
+    font-family: "Bona Nova SC", serif;
+    font-size: 2vw;
+}
+
+h3, p{
+    color: white;
+}
+
+.notesTitle{
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+.notesDisplay{
+    font-family: "EB Garamond", serif;
+    font-weight: 900;
+}

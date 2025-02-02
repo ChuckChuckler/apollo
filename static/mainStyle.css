@@ -1,0 +1,112 @@
+@keyframes divSelect{
+    from{
+        width: 30vw;
+        height: 30vw;
+        background-color: rgb(184, 178, 178);
+        color: black;
+    }
+    to{
+        width: 31vw;
+        height: 31vw;
+        background-color: rgb(107, 101, 101);
+        color: white;
+    }
+}
+
+@keyframes divDeselect{
+    to{
+        width: 31vw;
+        height: 31vw;
+        background-color: rgb(184, 178, 178);
+        color: black;
+    }
+    from{
+        width: 32vw;
+        height: 32vw;
+        background-color: rgb(107, 101, 101);
+        color: white;
+    }
+}
+
+body{
+    background-color: #171618;
+}
+
+
+.notesHolder{
+    background-color: #000000;
+    border: 1px white solid;
+    display: grid;
+    gap: 2vw;
+    grid-auto-rows: 30vw;
+    grid-template-columns: auto auto auto;
+    height: 85vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    justify-content: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.noteIcon{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 20px;
+    background-color: rgb(184, 178, 178);
+    text-align: center;
+    overflow: hidden;
+}
+
+.noteIcon:hover{
+    background-color: rgb(107, 101, 101);
+    color: white;
+    width: 31vw;
+    height: 31vw;
+    animation: divSelect 0.5s;
+}
+
+.noteIcon:not(:hover){
+    background-color: rgb(184, 178, 178);
+    width: 30vw;
+    height: 30vw;
+    color: black;
+    animation: divDeselect 0.5s;
+}
+
+.noNotes{
+    text-align: center;
+    color: rgb(233, 206, 238);
+}
+
+.divider{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.notesTitle{
+    font-size: 3vw;
+    user-select: none;
+}
+
+p{
+    height: 50%;
+    user-select: none;
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
+}
+
+.createButton{
+    font-size: 10vw;
+}
+
+.welcomeMsg{
+    text-align: center;
+    color: white;
+    font-family: "Playfair Display", serif;
+}
+
+h1{
+    user-select: none;
+    font-family: "Bona Nova SC", serif;
+}
