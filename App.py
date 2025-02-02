@@ -6,7 +6,7 @@ import google.generativeai as genai
 import speech_recognition as sr
 
 #configuring gemini api
-gemini_apikey = "AIzaSyDwc7y7YOWaBlSopVLwRXmayN0jKGpvGVE" #placeholder value for safety
+gemini_apikey = "YOUR_API_KEY_HERE" #placeholder value for safety
 genai.configure(api_key=gemini_apikey)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
