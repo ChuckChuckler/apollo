@@ -119,12 +119,15 @@ def listen():
     r = sr.Recognizer() 
 
     #now, taking + processing audio...
+    r = sr.Recognizer() 
+    r.energy_threshold = 200
+    #now, taking + processing audio...
     audioSource = sr.AudioFile('temp.wav')
     with audioSource as source:
-        audio_text = r.listen(source, timeout=30, phrase_time_limit=60)
+        r.adjust_for_ambient_noise(source, 1)
+        audio_text = r.record(source)
         try:
             transcribed = r.recognize_google(audio_text)
-
             #...send transcript to geminiapi, generate notes  
             response = model.generate_content(f"\
                 Assume the text you are about to receive is going to become a part of a student's notes. Reformat the block of text using the following process:\
